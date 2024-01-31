@@ -1,6 +1,6 @@
 let color ="black"
-
-document.addEventListener("DOMContentLoaded",function (){
+ 
+document.addEventListener("DOMContentLoaded",function (){ 
     createBoard(16);
     
     let popup_btn =document.querySelector("#popup")
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",function (){
         let size = getSize()
         createBoard(size);
     })
-})
+})// this event called DOMContentLoaded is for, run when the dom content is loaded;
 
 
 function createBoard(size){
@@ -19,12 +19,11 @@ function createBoard(size){
 
 
     let numDiv = size * size;
-
-    for(let i = 0; i < numDiv; i++){
-    let div =document.createElement("div");
-    board.insertAdjacentElement("beforeend", div)
-    div.addEventListener("mouseover", colorDiv)
-    }
+    for (let i = 0; i < numDiv; i++) {
+        let div = document.createElement("div")
+        board.appendChild(div)
+        div.addEventListener("mouseover", colorDiv)// we can click eventListener or others event
+    } 
 }
 
 
@@ -59,6 +58,6 @@ function colorDiv(){
 }
 
 function resetBoard(){
-    let divs =document.querySelectorAll("div")
+    let divs =document.querySelectorAll("div") // loop divs are called
     divs.forEach( (div) =>div.style.backgroundColor ="white");
 }
