@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let size = getSize();
         createBoard(size);
     });
-}); // this event called DOMContentLoaded is for, run when the dom content is loaded;
+}); // this event called DOMContentLoaded is for, it will run when the dom content is load;
 
 function createBoard(size) {
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -48,7 +48,7 @@ function colorDiv() {
         )}, 100%, 50%)`;
     } else if (color === "Green") {
         this.style.backgroundColor = "green";
-    } else if (color === "Blue") {
+    } else if (color === "RoyalBlue") {
         this.style.backgroundColor = "royalblue";
     } else {
         this.style.backgroundColor = "black";
