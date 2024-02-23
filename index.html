@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Etch-a-Sketch</title>
-</head>
-<body>
-    <h1>Etch-a-Sketch</h1>
-    <div class="header">
-        <h2>Select the size</h2>
-        <button id="popup" class="Select">Select</button>
-    </div>
-    <p id="message"></p>
-    <div class="contener"></div>
-    <div class="footer">
-        <button class="Black" onclick="setColor('Black')">Black</button>
-        <button class="Random" onclick="setColor('Random')">Random</button>
-        <button class="Reset"  onclick="resetBoard()">Reset</button>
-    </div>
-    
-    <script src="js/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Etch-a-Sketch</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Etch-a-Sketch</h1>
+            <div class="header">
+                <h2>Select the size</h2>
+                <button id="popup" class="Select">Select</button>
+            </div>
+            <p id="message"></p>
+            <div class="contener"></div>
+            <div class="footer">
+                <button class="Black" onclick="setColor('Black')">Black</button>
+                <button class="Green" onclick="setColor('Green')">Green</button>
+                <button class="Blue" onclick="setColor('Blue')">RoyalBlue</button>
+                <button class="Random" onclick="setColor('Random')">Random</button>
+                <button class="Reset" onclick="resetBoard()">Reset</button>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
 </html>
