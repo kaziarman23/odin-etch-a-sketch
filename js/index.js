@@ -6,7 +6,6 @@ let color = "black";
 document.addEventListener("DOMContentLoaded", function () {
     createBoard(16);
 
-    
     popup_btn.addEventListener("click", function () {
         let size = getSize();
         createBoard(size);
@@ -27,14 +26,12 @@ function createBoard(size) {
 
 function getSize() {
     let input = prompt("what will be the size of the board");
-   
+
     if (input === "") {
         message.innerText = "please provide a number";
-    }
-    else if (input < 0 || input > 100) {
+    } else if (input < 0 || input > 100) {
         message.innerText = "please provide a number between 1 and 100";
-    } 
-    else {
+    } else {
         message.innerText = "Now you can play";
         return input;
     }
@@ -49,20 +46,17 @@ function colorDiv() {
         this.style.backgroundColor = `hsl(${Math.floor(
             Math.random() * 360
         )}, 100%, 50%)`;
-    }
-    else if(color === "Green"){
+    } else if (color === "Green") {
         this.style.backgroundColor = "green";
-    }
-    else if(color === "Blue"){
+    } else if (color === "Blue") {
         this.style.backgroundColor = "royalblue";
-    }
-    else {
+    } else {
         this.style.backgroundColor = "black";
     }
 }
 
 function resetBoard() {
-    window.location.reload()
+    window.location.reload();
     // let divs = document.querySelectorAll("div"); // loop divs are called
     // divs.forEach((div) => (div.style.backgroundColor = "white"));
 }
